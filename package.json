@@ -1,11 +1,50 @@
 {
   "name": "be-setting",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "keywords": [
+    "web-components",
+    "web-component",
+    "custom-element",
+    "custom-elements",
+    "JSON",
+    "bind",
+    "observe"
+  ],
+  "description": "Derive initial state server streamed HTML",
+  "main": "be-setting.js",
+  "module": "be-setting.js",
+  "exports": {
+    ".": "./be-setting.js",
+    "./be-setting.js": "./be-setting.js"
   },
-  "author": "",
-  "license": "MIT"
+  "files": [
+    "*.js",
+    "types.d.ts"
+  ],
+  "types": "types.d.ts",
+  "scripts": {
+    "serve": "node node_modules/may-it-serve",
+    "test": "playwright test",
+    "safari": "npx playwright wk http://localhost:3030",
+    "update": "ncu -u && npm install"
+  },
+  "dependencies": {
+    "be-enhanced": "0.0.56",
+    "be-hive": "0.0.127",
+    "be-observant": "0.0.170",
+    "be-value-added": "0.0.17",
+    "trans-render": "0.0.707",
+    "xtal-element": "0.0.579"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.40.0",
+    "may-it-serve": "0.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahrus/be-setting.git"
+  },
+  "author": "anderson.bruce.b@gmail.com",
+  "license": "MIT",
+  "homepage": "https://github.com/bahrus/be-setting#readme"
 }
