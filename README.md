@@ -20,7 +20,7 @@ Binding to microdata is useful for
 ```html
 <my-custom-element>
     <template shadowrootmode=open>
-    <input disabled be-setting='is vegetarian from disabled.'>
+    <input disabled be-setting='prop is vegetarian from disabled.'>
     </template>
 </my-custom-element>
 ```
@@ -33,7 +33,7 @@ Sets host's isVegetarian property to true, and then flies away into the sunset. 
 
 ```html
 <div>
-<input disabled be-setting='is vegetarian from disabled.'>
+<input disabled be-setting='itemprop is vegetarian from disabled.'>
 </div>
 ```
 
@@ -41,7 +41,7 @@ Sets host's isVegetarian property to true, and then flies away into the sunset. 
 
 ```html
 <div itemscope>
-<input disabled be-setting='$ is vegetarian from disabled.'>
+<input disabled be-setting='itemprop is vegetarian from disabled.'>
 <link itemprop="isVegetarian" href="https://schema.org/True">
 </div>
 ```
@@ -53,7 +53,7 @@ Only adds the link itemprop tag if not already found in stream.  So if the serve
 ```html
 <my-custom-element>
     #shadow
-       <input disabled be-setting='is vegetarian from disabled, observed by $is vegan.'>
+       <input disabled be-setting='prop is vegetarian from disabled, observed by itemprop is vegan.'>
 </my-custom-element>
 ```
 
