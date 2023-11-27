@@ -53,7 +53,7 @@ Only adds the link itemprop tag if not already found in stream.  So if the serve
 ```html
 <mood-stone>
     #shadow
-       <input disabled be-setting='of is happy from initial value of disabled, observed by $ is in nirvana.'>
+       <input disabled be-setting='is happy from initial value of disabled, observed by $ is in nirvana.'>
 </mood-stone>
 ```
 
@@ -66,6 +66,8 @@ This will both set the host's isHappy property to true, *and* create the link it
        <link itemprop=isInNirvana be-observant='of is happy.'>
 </mood-stone>
 ```
+
+Q:  Could this be more simply specified by be-observant alone?
 
 ## Example 1d:  
 
