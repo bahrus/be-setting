@@ -10,7 +10,7 @@
     "bind",
     "observe"
   ],
-  "description": "Derive initial state server streamed HTML",
+  "description": "Derive initial state from server streamed HTML",
   "main": "be-setting.js",
   "module": "be-setting.js",
   "exports": {

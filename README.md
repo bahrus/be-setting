@@ -2,7 +2,7 @@
 
 ## Use case
 
-Derive initial state server streamed HTML.
+Derive initial state from server streamed HTML.
 
 Binding to microdata is useful for
 
@@ -18,22 +18,22 @@ Binding to microdata is useful for
 ## Example 1a: [TODO]
 
 ```html
-<my-custom-element>
+<mood-stone>
     <template shadowrootmode=open>
-    <input disabled be-setting='of is vegetarian from disabled.'>
+    <input disabled be-setting='is happy from initial value of disabled.'>
     </template>
-</my-custom-element>
+</mood-stone>
 ```
 
 What this does:
 
-Sets host's isVegetarian property to true, and then flies away into the sunset.  **It does not attempt to keep future changes to the input's disabled property in sync.**
+Sets host's isHappy property to true, and then flies away into the sunset.  **It does not attempt to keep future changes to the input's disabled property in sync.**
 
 ## Example 1b: [TODO]
 
 ```html
 <div>
-<input disabled be-setting='of $ is vegetarian from disabled.'>
+<input disabled be-setting='$ is happy from initial value of disabled.'>
 </div>
 ```
 
@@ -41,8 +41,8 @@ Sets host's isVegetarian property to true, and then flies away into the sunset. 
 
 ```html
 <div itemscope>
-<input disabled be-setting='of $ is vegetarian from disabled.'>
-<link itemprop="isVegetarian" href="https://schema.org/True">
+<input disabled be-setting='$ is happy from initial value of disabled.'>
+<link itemprop="isHappy" href="https://schema.org/True">
 </div>
 ```
 
@@ -51,18 +51,29 @@ Only adds the link itemprop tag if not already found in stream.  So if the serve
 ## Example 1c:  Combining 1a and 1b: [TODO]
 
 ```html
-<my-custom-element>
+<mood-stone>
     #shadow
-       <input disabled be-setting='of is vegetarian from disabled, observed by $ is vegan.'>
-</my-custom-element>
+       <input disabled be-setting='of is happy from initial value of disabled, observed by $ is in nirvana.'>
+</mood-stone>
 ```
 
-This will both set the host's isVegetarian property to true, *and* create the link itemprop tag, the equivalent of:
+This will both set the host's isHappy property to true, *and* create the link itemprop tag, the equivalent of:
 
 ```html
-<my-custom-element>
+<mood-stone>
     #shadow
-       <input disabled be-setting='of is vegetarian from disabled, observed by $ is vegan.'>
-       <link itemprop=isVegan be-observant='of is vegetarian.'>
-</my-custom-element>
+       <input disabled be-setting='of is happy from disabled, observed by $ is in nirvana.'>
+       <link itemprop=isInNirvana be-observant='of is happy.'>
+</mood-stone>
 ```
+
+## Example 1d:  
+
+```html
+<mood-stone>
+    #shadow
+       <link itemprop=isInNirvana be-setting='of is happy from $0:signalValue, observed by $ is in nirvana.'>
+</mood-stone>
+```
+
+This is just two-way binding, it seems, so use be-bound instead?
