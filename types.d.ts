@@ -3,11 +3,14 @@ import {IBE} from 'be-enhanced/types';
 import {ElTypes, SignalRefType} from 'be-linked/types';
 
 export interface EndUserProps extends IBE{
-    of?: Array<OfStatement>,
-    Of?: Array<OfStatement>
+    settingStatements: Array<SettingStatement>;
 }
 
-export type OfStatement = string;
+export interface AllProps extends EndUserProps{
+    
+}
+
+export type SettingStatement = string;
 
 export type AP = AllProps;
 

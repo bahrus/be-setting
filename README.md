@@ -4,7 +4,13 @@
 
 Derive initial state from server streamed HTML.
 
-Binding to microdata is useful for
+When HTML is sent to the browser, especially as it pertains to server-streamed web components, there are a number of ways we can pass down "state" associated with each instance (btw, we may choose to stream one fully rendered instance down, and let the of template instantiation to take care of the rest):
+
+1.  Encode the state as attributes of the web component.
+2.  Send the (JSON) data separately, then hydrate after the streaming is complete.
+3.  [TODO] continue expanding on the option this enhancement enables.
+
+Advantages are: [WIP]
 
 1.  Styling
 2.  Providing declarative custom elements (WIP).
@@ -67,7 +73,7 @@ This will both set the host's isHappy property to true, *and* create the link it
 </mood-stone>
 ```
 
-Q:  Could this be more simply specified by be-observant alone?
+Q:  Seems like the benefits don't outweigh the costs -- just as simple to add link.
 
 ## Example 1d:  
 
